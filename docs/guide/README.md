@@ -19,15 +19,18 @@
   - 黑白主题
   - 动态侧边栏（支持多级路由嵌套）
   - 动态面包屑（支持自定义配置）
+  - tabNav
   - Svg Sprite 图标
   - Mock 数据
   - 权限验证
 
 - 综合实例
   - 引导页
-  - System子项目
-  - Article子项目
-  - Links子项目  
+  - main主框架（基于admin-element-vue调整）
+  - main-antd主框架（基于admin-antd-vue调整）
+  - System子项目（基于admin-element-vue调整）
+  - Article子项目（基于admin-element-vue调整）
+  - Links子项目 （基于admin-antd-vue调整） 
   
 ```
 
@@ -91,12 +94,11 @@ cd admin-vue3-micro-qiankun
 # 复制文件
 copy .env.development  .env.development.local # 启用或修改里面的参数
 
-# 安装依赖，请使用 pnpm 
-
+# 安装依赖，请使用 pnpm
 pnpm install
 
 # 本地开发 启动项目
-npm run serve # 根据.env.development 中 MICRO_SERVE_MAIN 配置来启动框架,默认all
+pnpm run serve # 根据.env.development 中 MICRO_SERVE_MAIN 配置来启动框架,默认all
 ```
 
 > 请使用 pnpm , **[pnpm的安装与使用](http://liqingsong.cc/article/detail/26)** 。
@@ -109,6 +111,12 @@ npm run serve # 根据.env.development 中 MICRO_SERVE_MAIN 配置来启动框�
 ![Home](/images/index.png)
 
 接下来你可以修改代码进行业务开发了，本项目内基于 [admin-element-vue](http://admin-element-vue.liqingsong.cc/) 和 [admin-antd-vue](http://admin-antd-vue.liqingsong.cc) 分别创建了主框架和子项目的Demo来辅助开发，你可以继续阅读和探索左侧的其它文档。
+
+:::tip 注意
+`.env.development` 中 `MICRO_SERVE_MAIN=all` 会启动所有主框架和子项目，你可以修改此参数，如：`main` 指定启动主框架，他只会启动此主框架和其下需要的子项目。
+
+或者你可以不运行`pnpm run serve`，单独运行如：`pnpm run serve:main`、`pnpm run serve:article`来进行开发，这样可以减轻因启动太多服务电脑卡顿。
+:::
 
 
 ## Contribution

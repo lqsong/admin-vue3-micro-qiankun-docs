@@ -5,8 +5,8 @@ module.exports = [
           children:[
             '/guide/',
             '/guide/basis/config',
-            '/guide/basis/add-main',
             '/guide/basis/add-subproject',
+            '/guide/basis/add-main',
             '/guide/basis/build-and-release',
           ]
         },
