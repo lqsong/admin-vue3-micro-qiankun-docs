@@ -5,7 +5,8 @@ module.exports = {
     port: '8080',
     head: [
         ['link', {rel: 'icon', href: '/favicon.ico'}],
-        ['script', {type: 'text/javascript', src: 'https://s4.cnzz.com/z_stat.php?id=1280870475&web_id=1280870475'}]/* ,
+        ['script', {type: 'text/javascript', src: 'https://hm.baidu.com/hm.js?1013cc1b9efabb19bf9c91d1275aa9d8'}]
+        /* ['script', {type: 'text/javascript', src: 'https://s4.cnzz.com/z_stat.php?id=1280870475&web_id=1280870475'}],
         ['script', {type: 'text/javascript'}, `
             window.onload = function(){
                 var oScript = document.createElement("script");
